@@ -1,0 +1,18 @@
+def kidsWithCandies(candies, extraCandies):
+    """
+    :type candies: List[int]
+    :type extraCandies: int
+    :rtype: List[bool]
+    """
+    maxv=max(candies)
+    candies=[i+extraCandies for i in candies]
+    res=[]
+    for i in candies:
+        if i>=maxv:
+            res.append(True)
+        else:
+            res.append(False)
+    return res
+
+print(kidsWithCandies([2,3,5,1,3],3))
+print(kidsWithCandies([4,2,1,1,2],1))
